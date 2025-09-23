@@ -2,7 +2,13 @@
 
 ### **Tujuan**
 
-Pada latihan ini, kita akan mengembangkan lagi studi kasus Halaman Profil yang telah kita lakukan pada modul sebelumnya. Kali ini, kita akan menambahkan navigation list untuk menampilkan daftar konten yang tersedia dalam halaman tersebut. Kita akan memanfaatkan elemen list, lebih tepatnya adalah elemen ul.
+*   **Navigation list** berfungsi sebagai menu untuk berpindah ke bagian tertentu dari halaman.
+*   Kita gunakan elemen `**<ul>**` **(unordered list)** untuk menampung daftar menu.
+*   Di dalam `<ul>` terdapat beberapa `**<li>**` **(list item)**, masing-masing berisi tautan `<a>` ke bagian tertentu.
+*   `<nav>` → wadah navigasi.
+*   `<ul>` → daftar menu tanpa urutan.
+*   `<li>` → item dalam daftar.
+*   `<a href="#id">` → tautan menuju bagian dengan **id** yang sama di halaman.
 
 Hasil akhirnya akan tampak seperti berikut.
 
@@ -53,26 +59,87 @@ Silakan ikuti dan simak beberapa langkah berikut untuk mengikuti latihan dengan 
 Hasilnya akan tampak seperti berikut.  
 ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/asust/OneDrive/Dokumen/Materi%202025/X%20RPL/img_halaman_profil/image.jpg?version%3D1758353672139)**Bedah Kode**
 
-Kerja bagus! Kamu berhasil menerapkan elemen list pada Halaman Profil. Elemen ini akan berfungsi sebagai navigation list yang menampilkan daftar konten dalam Halaman Profil. Mari kita pelajari hal yang telah kita lakukan pada latihan ini.
+## 1\. Mengapa menggunakan `<ul>` daripada `<ol>`?
 
-Sebagaimana dipelajari sebelumnya, elemen list digunakan untuk membuat daftar item. Namun, kita memanfaatkannya untuk membuat navigation list atau daftar navigasi. Jika boleh menerka-nerka, kami yakin bahwa Anda akan bertanya-tanya seperti berikut.
+*   `<ul>` = _unordered list_ → daftar tanpa urutan/nomor.
+*   `<ol>` = _ordered list_ → daftar dengan urutan/nomor.
+*   Pada menu navigasi, **urutan biasanya tidak terlalu penting** (misalnya "Tentang Saya", "Pendidikan", "Kontak"). Tidak ada arti jika salah satunya ditampilkan sebagai nomor 1, 2, 3.  
+    👉 Karena itu, lebih tepat menggunakan `<ul>`.
 
-*   Mengapa menggunakan \<ul> daripada \<ol>?
-*   Mengapa menggunakan elemen list untuk membuatnya? Padahal daftar navigasi umumnya ditampilkan secara horizontal dan tanpa penomoran.
-*   Jika ditampilkan secara horizontal dan tanpa penomoran, bukankah bisa menggunakan elemen lain selain elemen list? Misalnya generic elemen seperti div.
+---
+
+## 2\. Mengapa tetap menggunakan elemen list untuk navigasi?
+
+*   **Aksesibilitas**: Screen reader (alat bantu untuk tunanetra) mengenali `<ul>` dan `<li>` sebagai daftar, sehingga pengguna tahu ada sekumpulan tautan navigasi.
+*   **Standar HTML semantik**: `<ul>` dengan `<li>` menunjukkan bahwa isi `<nav>` memang berupa kumpulan item navigasi, bukan sekadar teks biasa.
+*   **Mudah diatur dengan CSS**: Walaupun default tampilnya vertikal dengan bullet, kita bisa mengubah tampilannya menjadi horizontal, menghilangkan bullet, bahkan membuat gaya menu modern hanya dengan CSS.
+
+---
+
+## 3\. Mengapa tidak menggunakan `<div>` atau elemen generik lain?
+
+*   `<div>` adalah **generic container**, tidak memberikan makna semantik khusus. Browser, mesin pencari, maupun alat bantu tidak akan tahu bahwa itu adalah daftar navigasi.
+*   `<ul>` + `<li>` jauh lebih **tepat secara semantik** karena memang mendefinisikan kumpulan item.  
+    👉 Dengan kata lain, `<div>` bisa dipakai, tetapi **kurang baik** karena kehilangan makna semantik dan aksesibilitas.
+
+---
+
+### ✨ Kesimpulan
+
+*   Gunakan `**<ul>**` karena navigasi tidak perlu penomoran.
+*   Gunakan `**<li>**` agar setiap tautan navigasi jelas sebagai satu item daftar.
+*   Gunakan `**<div>**` **hanya jika terpaksa**, tapi sebaiknya hindari agar struktur HTML tetap semantik dan ramah aksesibilitas.
 
 > Catatan:
 > 
 > Kita belum membahas elemen div. Sebagai informasi awal, ia merupakan generic element yang sebetulnya tidak memilki makna sedikit pun. Namun, ia dapat dimanfaatkan untuk mengelompokkan sejumlah elemen.
 
-Pada dasarnya, kita dibebaskan untuk menggunakan elemen apa pun untuk mencapai konten dan tampilan yang diinginkan. Alasan yang paling logis adalah elemen \<ol> umumnya untuk menampilkan item-item yang mementingkan urutan. Contohnya, membuat langkah-langkah memasak mie instan, membuat minuman kopi, dsb. Namun, ketika membaca sebuah artikel _feature_ yang informasinya tidak bergantung pada urutan (tidak seperti resep, novel, dsb.), tentu pembaca bebas memulai dari mana pun yang diinginkan, bukan? Oleh sebab itulah, kita menggunakan elemen \<ul>.
+## 1\. Mengapa `<ul>` lebih tepat daripada `<ol>`?
 
-Elemen list merupakan salah satu elemen yang dapat dimanfaatkan menampilkan daftar navigasi halaman. Namun, tentu saja ada karakter _bullet_ pada setiap item dan ini tidak kita butuhkan. Bagaimana cara untuk mengubah tampilannya? Tentunya, kita akan mempelajari ini pada modul styling (modul terpisah).
+*   `<ol>` → digunakan kalau urutan itu penting (misalnya resep masakan, langkah instalasi software).
+*   `<ul>` → digunakan kalau urutan tidak penting (misalnya daftar menu navigasi, daftar fasilitas, daftar kontak).  
+    Navigasi halaman bukanlah sesuatu yang harus diurutkan, jadi wajar memakai `<ul>`.
 
-Saat ini, kita baru bisa membuat daftar navigasi hanya dengan elemen list, tetapi belum dapat berfungsi sebagaimana mestinya.
+---
 
-Untuk melakukannya, kita memerlukan elemen anchor (\<a>). Apakah Anda bertanya-tanya untuk cara lain? Jawabannya, ada! Namun, kita memerlukan JavaScript dan ini tidak dicakup pada kelas ini. Anda akan belajar JavaScript pada kelas lanjutan.
+## 2\. Elemen List untuk Navigasi
 
-Untuk menambahkan pengetahuan tentang elemen list, seperti biasa, kami mengarahkan Anda pada MDN sebagai dokumentasi terlengkap. Silakan kunjungi dan simak [The Ordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) dan [The Unordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul).
+*   Elemen **list (**`**<ul>**` **+** `**<li>**`**)** dipakai untuk menampilkan daftar item.
+*   Dalam konteks **navigasi**, setiap item daftar biasanya berupa tautan menuju bagian halaman atau halaman lain.
+*   Default-nya memang ada **bullet** pada tiap `<li>`. Tapi jangan khawatir, bullet ini bisa dihilangkan atau diganti gayanya dengan **CSS** (misalnya `list-style-type: none;`).  
+    👉 Styling ini akan dibahas lebih detail di modul khusus CSS.
+
+---
+
+## 3\. Supaya Navigasi Berfungsi
+
+*   Daftar navigasi bukan hanya teks biasa, tapi perlu bisa diklik.
+*   Untuk itu digunakan **elemen** `**<a>**` **(anchor)**:
+
+```
+<ul>
+  <li><a href="#tentang">Tentang Saya</a></li>
+  <li><a href="#pendidikan">Pendidikan</a></li>
+  <li><a href="#kontak">Kontak</a></li>
+</ul>
+```
+
+*   Klik tautan di atas akan membawa pengguna ke bagian tertentu di halaman (jika ada elemen dengan `id` yang sesuai).
+
+---
+
+## 4\. Referensi Lanjutan
+
+*   Kalau ingin memperdalam, dokumentasi **MDN** adalah sumber yang sangat bagus:
+*   The Ordered List element (`<ol>`)
+*   The Unordered List element (`<ul>`)
+
+---
+
+Jadi, intinya:
+
+*   Gunakan `<ul>` untuk navigasi karena urutannya tidak penting.
+*   Tambahkan `<a>` agar menu bisa diklik.
+*   Hilangkan bullet dengan CSS nanti di modul styling.
 
 [Kembali](index.md)
