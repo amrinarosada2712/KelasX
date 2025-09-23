@@ -6,7 +6,7 @@ Sejauh ini, kita sudah mengenal paragraf, heading, dan juga list pada HTML. Tapi
 
 ### **Long Quotations**
 
-Jika pada konten kita memiliki sebuah kutipan ataupun sebuah testimonial, kita dapat gunakan format _long quotations_ dengan menggunakan tags \<blockquote>. Konten dalam elemen \<blockquote> dapat berupa sebuah paragraf, heading, ataupun list.
+Gunakan tag `<blockquote>` untuk menampilkan kutipan atau testimonial; isinya bisa paragraf, heading, atau daftar.
 
 *   **Buat File LongQuotations.html**
 
@@ -20,7 +20,7 @@ Jika pada konten kita memiliki sebuah kutipan ataupun sebuah testimonial, kita d
 </blockquote>
 ```
 
-Pada elemen ini, kita dapat menggunakan atribut cite untuk menentukan sumber URL dari sebuah kutipan (jika kutipan tersebut bersumber dari sebuah situs website). Namun, tidak ada tampilan yang berbeda pada browser secara kasat mata.
+Gunakan atribut `cite` pada `<blockquote>` untuk menautkan sumber URL kutipan; ini bersifat metadata dan tidak mengubah tampilan di browser.
 
 ```html
 <blockquote cite="https://id.wikipedia.org/wiki/Situs_web">
@@ -34,9 +34,7 @@ Pada elemen ini, kita dapat menggunakan atribut cite untuk menentukan sumber URL
 
 ### **Preformatted Text**
 
-Pada modul sebelumnya, kita sudah mengetahui bahwa HTML akan mengabaikan spasi yang dituliskan secara berulang dan juga _line breaks_ (garis baru). Namun, pada beberapa tipe konten, seperti contoh kode atau puisi hal tersebut sangat berarti.
-
-Dengan begitu, terdapat sebuah elemen yang dapat kita gunakan untuk menampilkan konten sesuai yang kita tulis pada text editor. Untuk menggunakannya, kita gunakan elemen \<pre> sebagai pembungkus kontennya. Perhatikan contoh berikut.
+HTML biasanya mengabaikan spasi ganda dan baris baru. Untuk konten yang butuh format persis seperti di editor (mis. kode atau puisi), bungkus dengan `<pre>` agar spasi dan line break dipertahankan.
 
 *   **Buat File PreformattedText.html**
 
@@ -65,11 +63,7 @@ Antara kita Mati datang tidak membelah...
 
 ### **Figure**
 
-Elemen \<figure> digunakan untuk mempresentasikan konten tersendiri (_self-contained content_), seperti ilustrasi, diagram, foto, atau bisa juga sebuah baris kode. Banyak hal yang dapat digunakan dalam elemen ini. 
-
-Elemen ini digunakan untuk mengelompokkan blok konten yang dapat dipindahkan posisinya dari blok utama sebuah dokumen tanpa mempengaruhi arti dari induk dokumen.
-
-Dalam elemen \<figure>, kita dapat menuliskan elemen \<figcaption> sebagai sebuah caption (judul) untuk konten tersebut. Berikut adalah contoh penggunaan figure pada sebuah konten gambar.
+Gunakan `<figure>` untuk konten berdiri sendiri (ilustrasi, foto, diagram, cuplikan kode) yang bisa dipindah tanpa mengubah makna dokumen. Tambahkan `<figcaption>` sebagai judul/penjelasan konten.
 
 *   **Buat File Figure.html**
 

@@ -1,16 +1,30 @@
 ## **Inline Formatting Text: Anchor, Emphasized Text, Important Text, dan Short Quotation**
 
-Kita sudah belajar mengidentifikasi penggunaan elemen pada konten yang mayor (besar) dengan menerapkan _semantic HTML_ untuk mengorganisasi kontennya. Sekarang, kita akan mengenal beberapa _formatting text_ yang digunakan dalam sebuah baris teks (inline teks). 
+Singkatnya: elemen **block** selalu mulai di baris baru (paragraf, heading, list), sedangkan elemen **inline** tidak membuat baris baru dan hidup di dalam teks.
 
-Sebelum menjelaskan elemen _inline_ untuk _formatting text_ yang dapat digunakan, sepertinya kita perlu membahas sekilas mengenai block dan inline.
+Elemen inline umum untuk formatting teks:
 
-Pada standarnya, elemen HTML memiliki dua sifat, yaitu **block** dan **inline**. Elemen yang bersifat block selalu membuat baris baru ketika di-render. Contohnya seperti elemen paragraf, list, heading, dan lainnya. Lawan dari elemen tersebut, yaitu elemen inline. Elemen ini tidak menambahkan baris baru ketika di-render. Apa saja elemen tersebut? Mari kita bahas satu persatu.
+*   `<strong>`: penekanan kuat (bermakna penting).
+*   `<em>`: penekanan miring (makna tersirat/kontras).
+*   `<b>` / `<i>`: tebal/miring visual tanpa makna semantik.
+*   `<u>`: garis bawah.
+*   `<mark>`: sorot/marking.
+*   `<small>`: catatan kecil.
+*   `<sub>` / `<sup>`: subskrip/superskrip (rumus, catatan kaki).
+*   `<code>`: potongan kode.
+*   `<kbd>`: input keyboard (mis. Ctrl+C).
+*   `<samp>`: keluaran program.
+*   `<var>`: nama variabel.
+*   `<a>`: tautan.
+*   `<br>`: pindah baris.
+*   `<img>`: gambar inline.
+*   `<span>`: pembungkus inline serbaguna.
 
-*   **Tambahkan Folder InlineFormatting**
+## **Tambahkan Folder InlineFormatting**
 
 ## **Anchor**
 
-Apa itu _anchor_? Anchor (jangkar) merupakan elemen yang digunakan untuk membuat sebuah hyperlink ke halaman atau website lain, file, alamat email, atau URL lainnya. Untuk menggunakan elemen ini kita gunakan \<a> sebagai tag pembuka dan \</a> sebagai tag penutup. Selain itu, ada atribut wajib agar elemen ini berfungsi dengan baik, yaitu href untuk menetapkan sebuah target yang dituju. 
+**Anchor (**`**<a>**`**)** adalah elemen untuk membuat hyperlink ke halaman/web lain, file, bagian tertentu di halaman, email, atau telepon. Wajib punya atribut `**href**` sebagai target tautan.
 
 *   **Tambahkan File Anchor.php pada Folder InlineFormatting**
 
@@ -39,11 +53,10 @@ Gunakan elemen \<em> untuk menunjukkan bagian kata yang perlu kita tekankan. Ele
 <p>Dia adalah seorang <em>pelajar</em></p>
 ```
 
-Pada kalimat pertama, penekanan terdapat pada “siapa” seorang pelajar. Pada kalimat kedua, penekanan terdapat pada “apa” yang sedang ditekuni oleh Oding.
+*   `<em>` = penekanan makna dalam konteks kalimat.
+*   Untuk “penting/urgensi”, kombinasikan atau gunakan `<strong>`.
 
-Standarnya, pada browser sebuah kata yang ditekankan akan ditampilkan dalam gaya _miring_ pada teksnya
-
-*   **Important Text**
+# **Important Text**
 
 Gunakan elemen \<strong> untuk menunjukkan sebuah teks yang begitu penting (strong importance), serius ataupun mendesak. Artinya, teks tersebut harus dapat perhatian lebih dari teks biasa lainnya.
 
@@ -95,7 +108,7 @@ Standarnya, pada browser sebuah teks yang diberi markup \<cite> akan ditampilkan
 
 ## **Defining Terms**
 
-Elemen \<dfn> digunakan ketika mendefinisikan sebuah istilah (_term_). Elemen ini harus terletak pada elemen lain yang menaunginya. Contohnya pada sebuah elemen \<p> atau elemen \<section>. Berikut contoh penggunaannya.
+Elemen `**<dfn>**` dipakai untuk menandai sebuah **istilah (term) yang sedang didefinisikan** di dalam teks. Biasanya elemen ini ditempatkan di dalam elemen lain seperti `<p>` atau `<section>`.
 
 **Buat File DefiningTerms.html pada Folder InlineFormatting**
 
@@ -107,7 +120,12 @@ Standar pada browser yakni sebuah teks yang diberi markup \<dfn> akan ditampilka
 
 ## **Subscript dan Superscript**
 
-Subscript \<sub> dan superscript \<sup> adalah elemen yang dapat membuat teks yang ditampilkan tampak kecil, dengan posisi di bawah (sub) atau di atas (sup) dari teks biasanya. Elemen ini digunakan untuk menunjukkan sebuah rumus kimia ataupun matematika.
+Elemen `**<sub>**` (subscript) dan `**<sup>**` (superscript) digunakan untuk menulis teks kecil dengan posisi khusus:
+
+*   `<sub>` → teks kecil **di bawah** garis teks biasa.
+*   `<sup>` → teks kecil **di atas** garis teks biasa.
+
+Keduanya sering dipakai dalam **rumus kimia** dan **rumus matematika**.
 
 **Buat File SubSup.html pada Folder InlineFormatting**
 
@@ -121,7 +139,7 @@ Subscript \<sub> dan superscript \<sup> adalah elemen yang dapat membuat teks ya
 
 ## **Highlighted Text**
 
-Untuk menandai atau menyorot sebuah teks kita bisa menggunakan elemen \<mark>. Elemen ini digunakan ketika terdapat sebuah teks yang memiliki peran penting, biasanya teks tersebut merupakan bagian yang paling relevan atau penting dalam sebuah konteks kalimat.
+Elemen `<mark>` digunakan untuk **menyorot atau menandai teks penting** dalam sebuah kalimat. Biasanya teks yang diberi `<mark>` adalah bagian yang relevan atau perlu diperhatikan oleh pembaca.
 
 **Buat File HighlightedText.html pada Folder InlineFormatting**
 
@@ -140,9 +158,9 @@ Standarnya, pada browser teks yang diberi markup \<mark> akan ditampilkan dengan
 
 ## **Line Break**
 
-Terkadang, kita mungkin perlu menambahkan sebuah baris baru pada sebuah baris teks (termasuk dalam paragraf), tetapi kita mengetahui bahwa browser akan mengabaikan sebuah penulisan spasi ganda ataupun garis baru. Jadi, kita memerlukan sebuah tanda yang dapat digunakan untuk memberitahu browser untuk “Tambahkan baris baru di sini!”.
+Elemen `<br>` digunakan untuk membuat baris baru di dalam teks pada halaman web.
 
-_Inline line break element_ (\<br>) dapat digunakan untuk memberitahu browser untuk memberikan sebuah garis baru pada baris teks. Sama seperti gambar, elemen ini merupakan elemen kosong sehingga kita tidak membutuhkan sebuah tag penutup.
+Biasanya, jika kita menekan **Enter** atau menambahkan spasi ganda di dalam kode HTML, browser akan tetap menampilkannya sebagai satu baris saja. Supaya bisa memaksa teks turun ke baris berikutnya, kita perlu menggunakan `<br>`.
 
 **Buat File LineBreak.html pada Folder InlineFormatting**
 
