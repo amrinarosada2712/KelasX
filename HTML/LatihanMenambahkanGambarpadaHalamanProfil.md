@@ -21,7 +21,7 @@ Berikut adalah alur latihan kali ini.
 
 Silakan ikuti dan simak beberapa langkah berikut untuk mengikuti latihan dengan baik.
 
-1.  Silakan buka proyek Halaman Profil terakhir dengan VSCode. Jika belum memilikinya, silakan Anda unduh dan buka proyek tersebut pada [GitHub repository ini](https://github.com/dicodingacademy/a123-webdasar-labs/tree/201-menambahkan-list-pada-halaman-profil).
+1.  Silakan buka proyek Halaman Profil terakhir dengan VSCode. Jika belum memilikinya, silakan Anda unduh dan buka proyek tersebut pada code [klik disini.](paragrap.md)
 2.  Karena kita akan menampilkan elemen-elemen gambar, silakan unduh aset-aset gambar yang digunakan pada [halaman-profil-bandung-images.zip](https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/halaman-profil-bandung-images.zip).
 3.  Jika sudah, silakan pindahkan berkas hasil unduhan pada halaman proyek. Pastikan berkas diletakkan sejajar dengan berkas index.html![dos:624feed93fba0096c3ff4c8c7e1c762020230619221922.jpeg](https://assets.cdn.dicoding.com/original/academy/dos:624feed93fba0096c3ff4c8c7e1c762020230619221922.jpeg)
 4.  Lakukan ekstraksi berkas halaman-profil-bandung-images.zip dengan cara berikut.
