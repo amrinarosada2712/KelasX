@@ -1,7 +1,8 @@
 # Materi HTML
 
-*   [BlockFormatting](BlockFormatting.md)
-*   [InlineFormatting](InlineFormatting.md)
-*   [Latihan Menambahkan Gambar pada HalamanProfil](LatihanMenambahkanGambarpadaHalamanProfil.md)
-*   [Latihan Menambahkan List](LatihanMenambahkanList.md)
-*   [FORM HTML](FormHTML.md)
+*   [BlockFormatting](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/BlockFormatting.md)
+*   [InlineFormatting](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/InlineFormatting.md)
+*   [Latihan Menambahkan Gambar pada HalamanProfil](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/LatihanMenambahkanGambarpadaHalamanProfil.md)
+*   [Latihan Menambahkan List](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/LatihanMenambahkanList.md)
+*   [FORM HTML](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/FormHTML.md)
+    *   [Tugas Mandiri Form](TugasForm.md)
