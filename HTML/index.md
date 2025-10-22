@@ -6,4 +6,5 @@
 *   [Latihan Menambahkan List](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/LatihanMenambahkanList.md)
 *   [FORM HTML](https://github.com/amrinarosada2712/KelasX/blob/main/HTML/FormHTML.md)
     *   [Tugas Mandiri Form](TugasForm.md)
+*   [Media HTML](MediaHTML.md)
 *   [Semantik HTML](Modul_Elemen_Semantik_HTML5.md)
