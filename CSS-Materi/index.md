@@ -1,6 +1,6 @@
 # **Materi CSS**
 
-### [**Properti CSS**](Properti.md)
+### [**Properti CSS**](properti.md)
 
 ### [**Pertemuan 1**](pertemuan1.md)
 
